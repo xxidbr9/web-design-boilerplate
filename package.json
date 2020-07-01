@@ -1,25 +1,37 @@
 {
-  "name": "code",
-  "version": "1.0.0",
-  "description": "",
+  "name": "web-design-boilerplate",
+  "version": "1.2.5",
+  "description": "This is simple boiler plate web design with scss ",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
+    "test": "echo \"Error: no test ok\"",
     "watch": "node-sass --watch ./assets/scss/style.scss ./assets/css/style.css --output-style compressed",
     "build": "nodemon --exec babel-node ./assets/js/* ",
-    "start": "concurrently \"npm run watch\" \"npm run build\""
+    "start": "live-server & npm run build & npm run watch"
   },
-  "author": "xxidbr9",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxidbr9/web-design-boilerplate.git"
+  },
+  "author": "Barnando Akbarto <barnando13@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxidbr9/web-design-boilerplate/issues"
+  },
+  "homepage": "https://github.com/xxidbr9/web-design-boilerplate#readme",
   "dependencies": {
-    "concurrently": "^5.0.0",
-    "gsap": "^3.0.1",
-    "node-sass": "^4.13.0"
+    "gsap": "^3.3.4",
+    "node-sass": "^4.14.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/node": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "nodemon": "^2.0.1"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-node": "0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "live-server": "^1.2.1",
+    "nodemon": "^2.0.4"
   }
 }
