@@ -1,0 +1,25 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass --watch ./assets/scss/style.scss ./assets/css/style.css --output-style compressed",
+    "build": "nodemon --exec babel-node ./assets/js/* ",
+    "start": "concurrently \"npm run watch\" \"npm run build\""
+  },
+  "author": "xxidbr9",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "gsap": "^3.0.1",
+    "node-sass": "^4.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "nodemon": "^2.0.1"
+  }
+}
